@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
@@ -5,7 +10,6 @@ import (
 	"fmt"
 	"os"
 	"runtime"
-
 	"sync/atomic"
 
 	"github.com/apex/log"
@@ -34,7 +38,7 @@ func clone() {
 	//if err != nil {
 	//	fmt.Println(err.Error())
 	//}
-	//_, err = git.Clone(store, memfs.New(), &git.CloneOptions{URL: "https://github.com/dave/jsgo"})
+	//_, err = git.Clone(store, memfs.New(), &git.CloneOptions{URL: "https://github.com/sniperkit/snk.fork.dave-jsgo"})
 	store, err := filesystem.NewStorage(NewWriteLimitedFilesystem(memfs.New(), 50*1024*1024))
 	if err != nil {
 		log.Fatal(err.Error())

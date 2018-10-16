@@ -1,26 +1,28 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package assets
 
 import (
 	"archive/zip"
+	"bytes"
 	"context"
+	"encoding/gob"
 	"fmt"
 	"io"
-
-	"cloud.google.com/go/storage"
-
-	"bytes"
-
 	"io/ioutil"
 	"path/filepath"
 
-	"encoding/gob"
-
-	"github.com/dave/jsgo/config"
+	"cloud.google.com/go/storage"
 	"github.com/dave/patsy"
 	"github.com/dave/patsy/vos"
 	"github.com/gopherjs/gopherjs/compiler"
 	billy "gopkg.in/src-d/go-billy.v4"
 	"gopkg.in/src-d/go-billy.v4/memfs"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
 )
 
 var Assets = memfs.New()
@@ -38,7 +40,7 @@ func loadAssets(fs billy.Filesystem) error {
 	var buf *bytes.Buffer
 
 	if config.DEV {
-		dir, err := patsy.Dir(vos.Os(), "github.com/dave/jsgo/assets")
+		dir, err := patsy.Dir(vos.Os(), "github.com/sniperkit/snk.fork.dave-jsgo/assets")
 		if err != nil {
 			return err
 		}

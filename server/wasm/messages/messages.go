@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package messages
 
 import (
@@ -5,10 +10,11 @@ import (
 	"compress/gzip"
 	"encoding/gob"
 
-	"github.com/dave/jsgo/server/servermsg"
 	"github.com/dave/services"
 	"github.com/dave/services/constor/constormsg"
 	"github.com/gorilla/websocket"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/servermsg"
 )
 
 type Payload struct {

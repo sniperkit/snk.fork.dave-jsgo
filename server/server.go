@@ -1,32 +1,26 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package server
 
 import (
 	"bytes"
+	"context"
+	"errors"
 	"fmt"
 	"io"
 	"mime"
 	"net/http"
 	"os"
-	"strings"
-	"time"
-
 	pathpkg "path"
-
-	"errors"
-
-	"context"
-
+	"strings"
 	"sync"
+	"time"
 
 	"cloud.google.com/go/datastore"
 	"cloud.google.com/go/storage"
-	"github.com/dave/jsgo/assets"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/frizz"
-	"github.com/dave/jsgo/server/jsgo"
-	"github.com/dave/jsgo/server/play"
-	"github.com/dave/jsgo/server/store"
-	"github.com/dave/jsgo/server/wasm"
 	"github.com/dave/patsy"
 	"github.com/dave/patsy/vos"
 	"github.com/dave/services"
@@ -43,6 +37,14 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/shurcooL/httpgzip"
 	"gopkg.in/src-d/go-billy.v4"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/jsgo"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/wasm"
 )
 
 func init() {
@@ -112,7 +114,7 @@ func New(shutdown chan struct{}) *Handler {
 	h.mux.HandleFunc("/compile.css", h.CssHandler)
 	h.mux.HandleFunc("/_ah/health", h.HealthCheckHandler)
 	if config.LOCAL {
-		dir, err := patsy.Dir(vos.Os(), "github.com/dave/jsgo/assets/static/")
+		dir, err := patsy.Dir(vos.Os(), "github.com/sniperkit/snk.fork.dave-jsgo/assets/static/")
 		if err != nil {
 			panic(err)
 		}

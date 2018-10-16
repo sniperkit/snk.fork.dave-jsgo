@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package play
 
 import (
@@ -8,17 +13,17 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-
 	"time"
 
 	"cloud.google.com/go/storage"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/play/messages"
-	"github.com/dave/jsgo/server/store"
 	"github.com/dave/play/models"
 	"github.com/dave/services"
 	"github.com/dave/services/constor"
 	"github.com/dave/services/constor/constormsg"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play/messages"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
 )
 
 func (h *Handler) Share(ctx context.Context, info messages.Share, req *http.Request, send func(message services.Message), receive chan services.Message) error {

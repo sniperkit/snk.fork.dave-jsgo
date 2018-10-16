@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package wasm
 
 import (
@@ -8,13 +13,14 @@ import (
 	"time"
 
 	"cloud.google.com/go/datastore"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/store"
-	"github.com/dave/jsgo/server/wasm/messages"
 	"github.com/dave/services"
 	"github.com/dave/services/getter/cache"
 	"github.com/dave/services/queue"
 	"github.com/dave/services/tracker"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/wasm/messages"
 )
 
 type Handler struct {

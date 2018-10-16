@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package server
 
 import (
@@ -10,10 +15,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dave/jsgo/server/servermsg"
 	"github.com/dave/services"
 	"github.com/dave/services/tracker"
 	"github.com/gorilla/websocket"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/servermsg"
 )
 
 type SocketHandlerInterface interface {

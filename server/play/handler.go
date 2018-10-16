@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package play
 
 import (
@@ -5,18 +10,17 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-
-	"cloud.google.com/go/datastore"
-
 	"time"
 
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/play/messages"
-	"github.com/dave/jsgo/server/store"
+	"cloud.google.com/go/datastore"
 	"github.com/dave/services"
 	"github.com/dave/services/getter/cache"
 	"github.com/dave/services/queue"
 	"github.com/dave/services/tracker"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play/messages"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
 )
 
 type Handler struct {

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
@@ -26,9 +31,6 @@ import (
 	"cloud.google.com/go/storage"
 	"github.com/dave/frizz/models"
 	"github.com/dave/jennifer/jen"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/frizz/gotypes"
-	"github.com/dave/jsgo/server/frizz/gotypes/convert"
 	"github.com/dave/services"
 	"github.com/dave/services/builder"
 	"github.com/dave/services/constor"
@@ -44,6 +46,10 @@ import (
 	"gopkg.in/src-d/go-billy.v4"
 	"gopkg.in/src-d/go-billy.v4/memfs"
 	"gopkg.in/src-d/go-billy.v4/osfs"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/gotypes"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/gotypes/convert"
 )
 
 func init() {

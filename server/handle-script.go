@@ -1,17 +1,21 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package server
 
 import (
-	"net/http"
-
 	"bytes"
+	"io"
+	"net/http"
 	"strings"
 
-	"io"
-
-	"github.com/dave/jsgo/config"
 	gbuild "github.com/gopherjs/gopherjs/build"
 	"github.com/gopherjs/gopherjs/compiler"
 	"github.com/neelance/sourcemap"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
 )
 
 func (h *Handler) ScriptHandler(w http.ResponseWriter, req *http.Request) {

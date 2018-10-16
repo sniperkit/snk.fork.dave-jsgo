@@ -1,24 +1,25 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package convert
 
 import (
-	"go/parser"
-	"go/token"
-	"testing"
-
-	"go/ast"
-	"go/types"
-
 	"bytes"
 	"fmt"
-
-	"strings"
-
-	"sort"
-
+	"go/ast"
+	"go/parser"
+	"go/token"
+	"go/types"
 	"regexp"
+	"sort"
+	"strings"
+	"testing"
 
-	"github.com/dave/jsgo/server/frizz/gotypes"
 	"github.com/davecgh/go-spew/spew"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/gotypes"
 )
 
 func TestFoo(t *testing.T) {

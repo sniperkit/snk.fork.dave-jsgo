@@ -1,13 +1,16 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package convert
 
 import (
-	"go/types"
-
 	"fmt"
-
+	"go/types"
 	"sort"
 
-	"github.com/dave/jsgo/server/frizz/gotypes"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/gotypes"
 )
 
 func Object(o types.Object) gotypes.Object {

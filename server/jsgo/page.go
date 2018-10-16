@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package jsgo
 
 import (
@@ -8,10 +13,11 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/store"
 	"github.com/dave/services"
 	"github.com/dustin/go-humanize"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
 )
 
 func Page(w http.ResponseWriter, req *http.Request, database services.Database) {
@@ -22,7 +28,7 @@ func Page(w http.ResponseWriter, req *http.Request, database services.Database) 
 	path := normalizePath(strings.TrimSuffix(strings.TrimPrefix(req.URL.Path, "/"), "/"))
 
 	if path == "" {
-		http.Redirect(w, req, "https://github.com/dave/jsgo", http.StatusFound)
+		http.Redirect(w, req, "https://github.com/sniperkit/snk.fork.dave-jsgo", http.StatusFound)
 		return
 	}
 
@@ -97,7 +103,7 @@ var compilePageTemplate = template.Must(template.New("main").Funcs(template.Func
 							<h3 class="masthead-brand">jsgo</h3>
 							<nav class="nav nav-masthead">
 								<a class="nav-link active" href="">Compile</a>
-								<a class="nav-link" href="https://github.com/dave/jsgo">Info</a>
+								<a class="nav-link" href="https://github.com/sniperkit/snk.fork.dave-jsgo">Info</a>
 							</nav>
 						</div>
 					</div>
@@ -170,7 +176,7 @@ var compilePageTemplate = template.Must(template.New("main").Funcs(template.Func
 				</div>
 			</div>
 		</div>
-		<a href="https://github.com/dave/jsgo" target="_blank">
+		<a href="https://github.com/sniperkit/snk.fork.dave-jsgo" target="_blank">
 			<img style="position: absolute; top: 0; right: 0; border: 0;" src="{{ Asset "https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" }}" alt="Fork me on GitHub">
 		</a>
 	</body>

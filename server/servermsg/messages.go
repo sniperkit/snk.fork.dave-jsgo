@@ -1,6 +1,13 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package servermsg
 
-import "encoding/gob"
+import (
+	"encoding/gob"
+)
 
 func RegisterTypes() {
 	gob.Register(Queueing{})

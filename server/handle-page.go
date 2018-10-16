@@ -1,15 +1,19 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package server
 
 import (
+	"fmt"
 	"net/http"
 	"strings"
 
-	"fmt"
-
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/frizz"
-	"github.com/dave/jsgo/server/jsgo"
-	"github.com/dave/jsgo/server/play"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/jsgo"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play"
 )
 
 type pageType int

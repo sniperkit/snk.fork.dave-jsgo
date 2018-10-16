@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package messages
 
 import (
@@ -5,13 +10,14 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/dave/jsgo/server/servermsg"
 	"github.com/dave/services"
 	"github.com/dave/services/builder/buildermsg"
 	"github.com/dave/services/constor/constormsg"
 	"github.com/dave/services/deployer/deployermsg"
 	"github.com/dave/services/getter/gettermsg"
 	"github.com/gorilla/websocket"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/servermsg"
 )
 
 var payloads = []interface{}{

@@ -1,32 +1,27 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package frizz
 
 import (
+	"bytes"
 	"context"
+	"crypto/sha1"
+	"encoding/json"
+	"fmt"
 	"go/ast"
 	"go/parser"
 	"go/token"
 	"go/types"
+	"io"
 	"net/http"
 	"path/filepath"
+	"sort"
 	"strings"
 
-	"crypto/sha1"
-	"encoding/json"
-
-	"fmt"
-
-	"bytes"
-	"io"
-
-	"sort"
-
 	"github.com/dave/frizz/models"
-	"github.com/dave/jsgo/assets"
-	"github.com/dave/jsgo/assets/std"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/frizz/gotypes"
-	"github.com/dave/jsgo/server/frizz/gotypes/convert"
-	"github.com/dave/jsgo/server/frizz/messages"
 	"github.com/dave/services"
 	"github.com/dave/services/constor"
 	"github.com/dave/services/getter/get"
@@ -34,6 +29,13 @@ import (
 	"github.com/dave/services/session"
 	"github.com/dave/services/srcimporter"
 	"github.com/dave/stablegob"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets"
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets/std"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/gotypes"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/gotypes/convert"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/frizz/messages"
 )
 
 func init() {

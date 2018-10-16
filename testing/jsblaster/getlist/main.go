@@ -1,23 +1,25 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
 	"context"
-
 	"encoding/csv"
-	"os"
-
+	"fmt"
 	"log"
-
+	"os"
 	"path/filepath"
 
-	"fmt"
-
 	"cloud.google.com/go/datastore"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/store"
 	"github.com/dave/patsy"
 	"github.com/dave/patsy/vos"
 	"google.golang.org/api/iterator"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
 )
 
 func main() {
@@ -34,7 +36,7 @@ func run() error {
 	}
 	defer client.Close()
 
-	dir, err := patsy.Dir(vos.Os(), "github.com/dave/jsgo/testing/jsblaster")
+	dir, err := patsy.Dir(vos.Os(), "github.com/sniperkit/snk.fork.dave-jsgo/testing/jsblaster")
 	if err != nil {
 		return err
 	}

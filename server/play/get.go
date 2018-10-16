@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package play
 
 import (
@@ -8,15 +13,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/dave/jsgo/assets"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/play/messages"
 	"github.com/dave/services"
 	"github.com/dave/services/getter/get"
 	"github.com/dave/services/getter/gettermsg"
 	"github.com/dave/services/session"
 	"github.com/shurcooL/go/ctxhttp"
 	"gopkg.in/src-d/go-billy.v4"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play/messages"
 )
 
 func (h *Handler) Get(ctx context.Context, info messages.Get, req *http.Request, send func(message services.Message), receive chan services.Message) error {

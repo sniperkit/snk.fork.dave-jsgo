@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package frizz
 
 import (
@@ -8,9 +13,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/store"
 	"github.com/dave/services"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
 )
 
 func Page(w http.ResponseWriter, req *http.Request, database services.Database) error {

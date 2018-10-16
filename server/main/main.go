@@ -1,17 +1,20 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
+	"context"
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/dave/jsgo/config"
-
-	"context"
 	"os/signal"
 	"syscall"
 
-	"github.com/dave/jsgo/server"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server"
 )
 
 func main() {

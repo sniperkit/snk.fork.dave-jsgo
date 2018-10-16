@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package wasm
 
 import (
@@ -10,13 +15,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/servermsg"
-	"github.com/dave/jsgo/server/store"
-	"github.com/dave/jsgo/server/wasm/messages"
 	"github.com/dave/services"
 	"github.com/dave/services/constor"
 	"github.com/dave/services/constor/constormsg"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/servermsg"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/wasm/messages"
 )
 
 func (h *Handler) DeployQuery(ctx context.Context, info messages.DeployQuery, req *http.Request, send func(services.Message), receive chan services.Message) error {

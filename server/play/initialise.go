@@ -1,18 +1,24 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package play
 
 import (
 	"context"
 	"net/http"
 
-	"github.com/dave/jsgo/assets"
-	"github.com/dave/jsgo/assets/std"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/play/messages"
 	"github.com/dave/services"
 	"github.com/dave/services/deployer"
 	"github.com/dave/services/getter/get"
 	"github.com/dave/services/getter/gettermsg"
 	"github.com/dave/services/session"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets"
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets/std"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play/messages"
 )
 
 func (h *Handler) Initialise(ctx context.Context, info messages.Initialise, req *http.Request, send func(message services.Message), receive chan services.Message) error {

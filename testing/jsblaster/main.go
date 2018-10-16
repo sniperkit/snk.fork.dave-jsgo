@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package main
 
 import (
@@ -13,9 +18,10 @@ import (
 	"time"
 
 	"github.com/dave/blast/blaster"
-	"github.com/dave/jsgo/server/play/messages"
 	"github.com/mitchellh/mapstructure"
 	"golang.org/x/net/websocket"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/play/messages"
 )
 
 // Set debug to true to dump full stack info on every error.

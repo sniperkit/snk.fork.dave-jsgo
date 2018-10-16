@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package jsgo
 
 import (
@@ -7,17 +12,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dave/jsgo/assets"
-	"github.com/dave/jsgo/assets/std"
-	"github.com/dave/jsgo/config"
-	"github.com/dave/jsgo/server/jsgo/messages"
-	"github.com/dave/jsgo/server/servermsg"
-	"github.com/dave/jsgo/server/store"
 	"github.com/dave/services"
 	"github.com/dave/services/deployer"
 	"github.com/dave/services/getter/get"
 	"github.com/dave/services/getter/gettermsg"
 	"github.com/dave/services/session"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets"
+	"github.com/sniperkit/snk.fork.dave-jsgo/assets/std"
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/jsgo/messages"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/servermsg"
+	"github.com/sniperkit/snk.fork.dave-jsgo/server/store"
 )
 
 func (h *Handler) Compile(ctx context.Context, info messages.Compile, req *http.Request, send func(services.Message), receive chan services.Message) error {

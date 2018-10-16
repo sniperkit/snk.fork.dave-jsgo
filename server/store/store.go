@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package store
 
 import (
@@ -5,8 +10,9 @@ import (
 	"time"
 
 	"cloud.google.com/go/datastore"
-	"github.com/dave/jsgo/config"
 	"github.com/dave/services"
+
+	"github.com/sniperkit/snk.fork.dave-jsgo/config"
 )
 
 type Error struct {
